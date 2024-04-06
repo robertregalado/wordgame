@@ -14,7 +14,7 @@ from pywebio.output import *
 total = 0
 ppl = 0
 turn = 0
-plname = input("Hey! Please enter your name: ", type=Text)
+plname = input("Hey! Please enter your name: ")
 #category = input("Bible Characters", type=TEXT)
 
 def choose():

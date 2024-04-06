@@ -1,7 +1,7 @@
 from copyreg import pickle
 from lib2to3.pgen2.token import NUMBER
 import random
-from tkinter.ttk import TEXT
+from tkinter import TEXT
 from unicodedata import category
 
 from matplotlib.pyplot import flag

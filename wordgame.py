@@ -1,7 +1,7 @@
 from copyreg import pickle
 from lib2to3.pgen2.token import NUMBER
 import random
-from tkinter import TEXT
+from tkinter import Text
 from unicodedata import category
 
 from matplotlib.pyplot import flag
@@ -14,7 +14,7 @@ from pywebio.output import *
 total = 0
 ppl = 0
 turn = 0
-plname = input("Hey! Please enter your name: ", type=TEXT)
+plname = input("Hey! Please enter your name: ", type=Text)
 #category = input("Bible Characters", type=TEXT)
 
 def choose():
@@ -59,7 +59,7 @@ def play():
         picked_word = choose()
         qn = jumble(picked_word)
         put_text("Your challenge is :", qn)
-        ans = input("Your answer: ", type=TEXT)
+        ans = input("Your answer: ", type=Text)
         
         if ans == picked_word:
             ppl += 1
@@ -75,7 +75,7 @@ def play():
                 flag = 1
                 break
     if flag == 0: #(User want to continue playing or (no wrong ans + 6 words over))
-        cont = input("\nDo you want to continue playing?(YES/NO)", type = TEXT)
+        cont = input("\nDo you want to continue playing?(YES/NO)", type = Text)
         if cont.lower() == 'yes':
             play()
             

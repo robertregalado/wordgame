@@ -1,11 +1,12 @@
 from copyreg import pickle
 from lib2to3.pgen2.token import NUMBER
 import random
-from tkinter.tix import TEXT
+from tkinter.ttk import TEXT
 from unicodedata import category
 
 from matplotlib.pyplot import flag
-from scipy import rand
+#from scipy import rand
+from numpy.random import rand
 #pip install pywebio
 from pywebio.input import *
 from pywebio.output import *

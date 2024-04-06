@@ -1,5 +1,5 @@
 from copyreg import pickle
-from lib2to3.pgen2.token import NUMBER
+#from lib2to3.pgen2.token import NUMBER
 import random
 from tkinter import Text
 from unicodedata import category
@@ -59,7 +59,7 @@ def play():
         picked_word = choose()
         qn = jumble(picked_word)
         put_text("Your challenge is :", qn)
-        ans = input("Your answer: ", type=Text)
+        ans = input("Your answer: ")
         
         if ans == picked_word:
             ppl += 1
@@ -68,14 +68,14 @@ def play():
         
         else:
             put_text("Uh oh! Better luck next time...\nThe correct answer is: "+picked_word).style('color: #fc030c; font-size: 18px')
-            c = input("Press 1 to continue and 0 to quit :",type=NUMBER)
+            c = input("Press 1 to continue and 0 to quit :")
             
             if c == 0:
                 thank(plname,ppl, total)
                 flag = 1
                 break
     if flag == 0: #(User want to continue playing or (no wrong ans + 6 words over))
-        cont = input("\nDo you want to continue playing?(YES/NO)", type = Text)
+        cont = input("\nDo you want to continue playing?(YES/NO)")
         if cont.lower() == 'yes':
             play()
             

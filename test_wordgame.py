@@ -28,7 +28,7 @@ def test_play(mock_input):
 def test_thank(mock_input):
     # Redirect stdout to capture output for testing
     with patch('sys.stdout', new=StringIO()) as fake_out:
-        main_script.thank("Test Player", 1, 3)
+        wordgame.thank("Test Player", 1, 3)
         output = fake_out.getvalue().strip()
     assert "test player, your score is :" in output.lower()
     assert "thanks for playing!" in output.lower()
